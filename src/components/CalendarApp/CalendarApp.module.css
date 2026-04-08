@@ -1,0 +1,584 @@
+/* CalendarApp.module.css */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.calendarCard {
+  width: 100%;
+  max-width: 1200px;
+  background-color: var(--bg-panel);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+@media (min-width: 768px) {
+  .calendarCard {
+    flex-direction: column;
+    height: 800px;
+  }
+}
+
+.topImageBanner {
+  height: 35%;
+  display: flex;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroImageHalf {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+
+.bottomContent {
+  height: 65%;
+  display: flex;
+  flex-direction: row;
+}
+
+.leftColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-right: 1px solid var(--border-subtle);
+  background-color: var(--bg-panel);
+  z-index: 10;
+}
+
+@media (max-width: 767px) {
+  .leftColumn {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+}
+
+.rightColumn {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-panel);
+  position: relative;
+}
+
+
+.wireBinding {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 24px;
+  display: flex;
+  justify-content: space-around;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.coil {
+  width: 10px;
+  height: 24px;
+  background-color: #6b7280;
+  border-radius: 8px;
+  box-shadow: inset 2px 2px 4px rgba(255,255,255,0.3), inset -2px -2px 4px rgba(0,0,0,0.5);
+  border: 1px solid #4b5563;
+}
+
+/* Header & Controls */
+.headerNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.navButtonGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--border-subtle);
+  color: var(--text-primary);
+  transition: all 0.2s;
+}
+
+.iconButton:hover:not(:disabled) {
+  background-color: var(--accent-color);
+  color: white;
+  transform: scale(1.05);
+}
+
+.iconButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.monthLabelWrap {
+  margin-bottom: 2rem;
+  position: relative;
+  height: auto;
+}
+
+.monthLabel {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.yearRowWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.yearLabel {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.clockIcon {
+  opacity: 0.7;
+}
+
+/* Notes Section */
+.notesSection {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.notesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.notesTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.notesList {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.noteItem {
+  background-color: var(--border-subtle);
+  border-radius: 8px;
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: grab;
+  /* CSS Resize natively */
+  resize: both;
+  overflow: hidden;
+  min-width: 150px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+}
+.noteItem:active {
+  cursor: grabbing;
+}
+.noteInner {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+}
+
+.noteItem:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.noteText {
+  font-size: 0.875rem;
+  white-space: pre-wrap;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.noteMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.noteActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.noteActionButton {
+  color: var(--text-muted);
+}
+.noteActionButton:hover {
+  color: var(--accent-color);
+}
+
+.pickerDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-darker);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  width: 280px;
+}
+
+.pickerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.pickerBtn {
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  background-color: var(--border-subtle);
+  color: var(--text-primary);
+  transition: background-color 0.2s;
+}
+
+.pickerBtn:hover {
+  background-color: var(--cell-hover);
+}
+
+.pickerBtnActive {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.pickerYearRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.pickerYearRow button {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--border-subtle);
+  border-radius: 4px;
+}
+
+
+.noteAddArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.noteTextareaLined {
+  width: 100%;
+  flex: 1;
+  min-height: 150px;
+  resize: none;
+  border: none;
+  background-color: transparent;
+  background-image: repeating-linear-gradient(transparent, transparent 31px, var(--border-darker) 31px, var(--border-darker) 32px);
+  line-height: 32px;
+  padding: 0 0.25rem;
+  color: var(--text-primary);
+  font-family: inherit;
+}
+
+.noteTextareaLined:focus {
+  outline: none;
+}
+
+.saveNoteBtn {
+  align-self: center;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.6rem 2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+  margin-top: 1rem;
+}
+
+.saveNoteBtn:hover:not(:disabled) {
+  background-color: var(--accent-color-hover);
+}
+
+.saveNoteBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.focusOverlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  padding: 2rem;
+}
+
+.focusCard {
+  background-color: var(--bg-panel);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Right Col: Hero & Grid */
+.heroSection {
+  height: 40%;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.heroImage {
+  object-fit: cover;
+  transition: transform 10s ease-out; /* Ken Burns base */
+}
+
+/* Page flip overlay styling */
+.flipContainerWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  perspective: 2000px;
+}
+
+.flipInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-calendar);
+}
+
+.gridSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.weekdaysHeader {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 1rem;
+}
+
+.weekday {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.daysGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0.25rem;
+}
+
+.dayCellWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.dayBg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2.5rem;
+  transform: translateY(-50%);
+  background-color: var(--accent-color-light);
+  z-index: 1;
+}
+
+.dayContent {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  color: var(--text-primary);
+}
+
+.dayCellWrapper:hover .dayContent {
+  background-color: var(--cell-hover);
+}
+
+.dayOutOfMonth .dayContent {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.dayWeekend .dayContent {
+  color: var(--accent-color);
+}
+
+.dayToday .dayContent {
+  background-color: var(--text-primary);
+  color: var(--bg-panel);
+}
+
+.daySelected .dayContent {
+  background-color: var(--selection-color);
+  color: var(--selection-text);
+  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+}
+
+.holidayDot {
+  width: 4px;
+  height: 4px;
+  background-color: var(--holiday-dot);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0.35rem;
+}
+
+.noteIndicator {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #f59e0b; /* Amber */
+  border: 1px solid var(--bg-panel);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background-color: var(--accent-color-light);
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.themeToggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--bg-panel);
+  color: var(--text-primary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: transform 0.2s;
+}
+
+.themeToggle:hover {
+  transform: scale(1.1);
+}
+
+/* Utility layout fixes for replacing removed tailwind */
+.flexColGap2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.flexJustifyEndGap2 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.heroGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--bg-calendar), transparent);
+  opacity: 0.8;
+}
+
+.absoluteTopRight {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.absoluteMonthWrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

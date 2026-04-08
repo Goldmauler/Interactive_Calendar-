@@ -1,0 +1,144 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/globals.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cal-sans');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* ═══════════════════════════════════════════════
+   TAKEUFRWF — Corporate Brand Design System
+   Saffron + Deep Navy + Ivory accent palette
+═══════════════════════════════════════════════ */
+:root {
+  /* Light Theme – TAKEUFRWF Brand */
+  --brand-primary:   #FF6B00;     /* saffron-orange */
+  --brand-deep:      #0F172A;     /* deep navy */
+  --brand-gold:      #F59E0B;     /* turmeric gold */
+  --brand-ivory:     #FFF8F1;     /* warm ivory */
+  --brand-green:     #166534;     /* forest green */
+
+  --bg-calendar:     #FFFBF5;
+  --bg-page:         #1E293B;
+  --bg-panel:        #FFFFFF;
+  --text-primary:    #1E293B;
+  --text-secondary:  #475569;
+  --text-muted:      #94A3B8;
+  --accent-color:    #FF6B00;
+  --accent-color-hover: #E55A00;
+  --accent-color-light: rgba(255,107,0,0.12);
+  --border-subtle:   #FEF3E8;
+  --border-darker:   #FDE8D0;
+  --holiday-dot:     #DC2626;
+  --festival-glow:   rgba(255,107,0,0.25);
+  --shadow-sm:       0 1px 2px 0 rgba(0,0,0,0.05);
+  --shadow-lg:       0 24px 72px rgba(255,107,0,0.12), 0 2px 12px rgba(0,0,0,0.08);
+  --selection-color: #FF6B00;
+  --selection-text:  #FFFFFF;
+  --cell-hover:      #FEF3E8;
+  --success-color:   #16A34A;
+}
+
+[data-theme='dark'] {
+  --bg-calendar:     #1E293B;
+  --bg-page:         #0F172A;
+  --bg-panel:        #1E293B;
+  --text-primary:    #F8FAFC;
+  --text-secondary:  #CBD5E1;
+  --text-muted:      #475569;
+  --accent-color:    #FB923C;
+  --accent-color-hover: #FDBA74;
+  --accent-color-light: rgba(251,146,60,0.18);
+  --border-subtle:   #334155;
+  --border-darker:   #475569;
+  --holiday-dot:     #F87171;
+  --festival-glow:   rgba(251,146,60,0.30);
+  --shadow-sm:       0 1px 2px 0 rgba(0,0,0,0.5);
+  --shadow-lg:       0 24px 72px rgba(0,0,0,0.6), 0 2px 12px rgba(251,146,60,0.15);
+  --selection-color: #FB923C;
+  --selection-text:  #0F172A;
+  --cell-hover:      #334155;
+  --success-color:   #22C55E;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .heading-font {
+  font-family: 'Cal Sans', sans-serif;
+}
+
+.serif-font {
+  font-family: 'Playfair Display', serif;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
+ul { list-style: none; }
+
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* ─── Festival Pulse Animation ──────────────── */
+@keyframes festivalPulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--festival-glow); }
+  50%       { box-shadow: 0 0 0 6px transparent; }
+}
+
+@keyframes holiColors {
+  0%   { filter: hue-rotate(0deg) saturate(1.5); }
+  100% { filter: hue-rotate(360deg) saturate(2); }
+}
+
+@keyframes diwaliGlow {
+  0%, 100% { text-shadow: 0 0 8px #F59E0B, 0 0 20px #FF6B00; }
+  50%       { text-shadow: 0 0 16px #FBBF24, 0 0 40px #FF6B00; }
+}
+
+/* ─── TAKEUFRWF Company Badge ────────────────── */
+.company-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--brand-primary);
+  text-transform: uppercase;
+}
+
+.festival-diwali { animation: diwaliGlow 2s ease-in-out infinite; }
+.festival-holi   { animation: holiColors 4s linear infinite; }
+.festival-pulse  { animation: festivalPulse 2s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+
+
+

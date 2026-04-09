@@ -1,6 +1,6 @@
 .pageRoot {
-  background: #0a0f1e;
-  color: #f8fafc;
+  background: linear-gradient(180deg, rgba(243, 244, 246, 1) 0%, rgba(243, 244, 246, 1) 55%, rgba(236, 238, 242, 1) 100%);
+  color: #0f172a;
   min-height: 100vh;
 }
 
@@ -11,13 +11,13 @@
   right: 0;
   height: 2px;
   z-index: 110;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(148, 163, 184, 0.35);
 }
 
 .progressFill {
   display: block;
   height: 100%;
-  background: #f97316;
+  background: #64748b;
   transition: width 120ms linear;
 }
 
@@ -31,8 +31,8 @@
 .navBar {
   margin: 0 auto;
   max-width: 1180px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(10, 15, 30, 0.62);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(243, 244, 246, 0.9);
   backdrop-filter: blur(12px);
   border-radius: 14px;
   display: flex;
@@ -43,10 +43,28 @@
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brandLogo {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 999px;
+  background: rgba(243, 244, 246, 1);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  padding: 2px;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
+}
+
+.brandText {
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: #0f172a;
 }
 
 .navList {
@@ -55,19 +73,20 @@
 }
 
 .navLink {
-  color: #cbd5e1;
+  color: #334155;
   text-decoration: none;
   font-size: 0.86rem;
 }
 
 .navLink:hover {
-  color: #f8fafc;
+  color: #0f172a;
 }
 
 .navButton {
   text-decoration: none;
-  color: #0a0f1e;
-  background: #f97316;
+  color: #0f172a;
+  background: rgba(243, 244, 246, 1);
+  border: 1px solid rgba(148, 163, 184, 0.45);
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 700;
@@ -134,7 +153,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #fdba74;
+  color: #334155;
   margin-bottom: 1rem;
 }
 
@@ -160,7 +179,7 @@
 }
 
 .heroSub {
-  color: #cbd5e1;
+  color: #334155;
   max-width: 520px;
   font-size: 1.03rem;
   line-height: 1.6;
@@ -187,22 +206,23 @@
 }
 
 .ctaPrimary {
-  color: #0a0f1e;
-  background: #f97316;
+  color: #0f172a;
+  background: rgba(243, 244, 246, 1);
+  border-color: rgba(148, 163, 184, 0.45);
 }
 
 .ctaPrimary:hover {
-  background: #fb923c;
+  background: rgba(229, 231, 235, 1);
 }
 
 .ctaGhost {
-  color: #f8fafc;
-  border-color: rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.03);
+  color: #334155;
+  border-color: rgba(148, 163, 184, 0.45);
+  background: rgba(243, 244, 246, 0.88);
 }
 
 .ctaGhost:hover {
-  border-color: rgba(255, 255, 255, 0.34);
+  border-color: rgba(100, 116, 139, 0.55);
 }
 
 .heroPreviewCard {
@@ -211,10 +231,9 @@
   justify-self: end;
   aspect-ratio: 4 / 3;
   border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(243, 244, 246, 1);
   overflow: hidden;
-  opacity: 0.7;
-  filter: blur(0.4px);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
   transform: translateZ(0);
 }
@@ -235,14 +254,14 @@
 }
 
 .orbOne {
-  background: #f97316;
+  background: rgba(203, 213, 225, 0.9);
   left: -70px;
   top: 18%;
   animation: orbDriftA 14s ease-in-out infinite alternate;
 }
 
 .orbTwo {
-  background: #6366f1;
+  background: rgba(148, 163, 184, 0.9);
   right: -90px;
   bottom: 10%;
   animation: orbDriftB 18s ease-in-out infinite alternate;
@@ -276,7 +295,7 @@
 }
 
 .sectionHead p {
-  color: #9ca3af;
+  color: #475569;
   line-height: 1.65;
 }
 
@@ -343,7 +362,7 @@
   position: relative;
   width: min(100%, 390px);
   border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(148, 163, 184, 0.3);
   overflow: hidden;
   background: #020617;
   box-shadow: 0 25px 55px rgba(0, 0, 0, 0.5);
@@ -378,21 +397,21 @@
 }
 
 .proofStrip > div {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.28);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(243, 244, 246, 1);
   padding: 1rem;
 }
 
 .proofStrip strong {
   display: block;
-  color: #f5f0e8;
+  color: #0f172a;
   font-size: 1.35rem;
   margin-bottom: 0.2rem;
 }
 
 .proofStrip span {
-  color: #9ca3af;
+  color: #475569;
   font-size: 0.86rem;
 }
 
@@ -409,7 +428,7 @@
 }
 
 .ctaSection p {
-  color: #9ca3af;
+  color: #475569;
   max-width: 640px;
   margin: 0 auto 1.2rem;
   line-height: 1.6;
@@ -423,13 +442,13 @@
 }
 
 .footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(148, 163, 184, 0.22);
   padding: 1.1rem 1rem 2rem;
   text-align: center;
 }
 
 .footer p {
-  color: #94a3b8;
+  color: #475569;
   font-size: 0.82rem;
 }
 

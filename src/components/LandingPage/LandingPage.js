@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import styles from './LandingPage.module.css';
 
-const APP_NAME = 'AppName';
+const APP_NAME = 'Calendra';
 
 const FEATURES = [
   {
@@ -189,7 +189,17 @@ export default function LandingPage() {
 
       <header className={styles.navWrap}>
         <nav className={styles.navBar}>
-          <div className={styles.brand}>{APP_NAME}</div>
+          <div className={styles.brand}>
+            <Image
+              src="/images/Adobe Express - file.png"
+              alt={`${APP_NAME} logo`}
+              width={36}
+              height={36}
+              priority
+              className={styles.brandLogo}
+            />
+            <span className={styles.brandText}>{APP_NAME}</span>
+          </div>
           <ul className={styles.navList}>
             {navLinks.map(link => (
               <li key={link.href}>
@@ -235,8 +245,8 @@ export default function LandingPage() {
 
           <aside className={styles.heroPreviewCard} aria-hidden="true">
             <Image
-              src="/images/month-04.png"
-              alt="Calendar preview"
+              src="/images/Adobe Express - file.png"
+              alt="Calendra logo"
               fill
               priority
               sizes="(max-width: 840px) 92vw, 42vw"

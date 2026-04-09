@@ -498,19 +498,20 @@ export default function CalendarApp() {
               position: 'fixed', inset: 0, zIndex: 200,
               background: 'rgba(0,0,0,0.85)',
               display: 'flex', flexDirection: 'column',
-              alignItems: 'center', justifyContent: 'center',
-              padding: '2rem', gap: '1rem', backdropFilter: 'blur(12px)'
+              alignItems: 'center', justifyContent: 'flex-start',
+              padding: '1rem', gap: '0.9rem', backdropFilter: 'blur(12px)',
+              overflowY: 'auto', overflowX: 'hidden', boxSizing: 'border-box'
             }}
           >
-            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: 900, alignItems: 'center', marginBottom: '0.5rem' }}>
-              <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: 900, alignItems: 'center', marginBottom: '0.5rem', gap: '0.75rem', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
                 <button onClick={() => handleYearChange(-1)} style={{ color: 'white', background: 'rgba(255,255,255,0.1)', borderRadius: 8, padding: '0.5rem 1rem' }}><ChevronLeft size={20}/></button>
                 <h2 style={{ color: 'white', fontSize: '2rem', fontFamily: 'var(--font-display)' }}>{year}</h2>
                 <button onClick={() => handleYearChange(1)} style={{ color: 'white', background: 'rgba(255,255,255,0.1)', borderRadius: 8, padding: '0.5rem 1rem' }}><ChevronRight size={20}/></button>
               </div>
               <button onClick={() => setYearMode(false)} style={{ color: 'white', background: 'rgba(255,255,255,0.15)', borderRadius: 8, padding: '0.5rem 1rem' }}>Close</button>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', width: '100%', maxWidth: 900 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '0.7rem', width: '100%', maxWidth: 900 }}>
               {MONTH_NAMES.map((mName, mi) => {
                 const miniGrid = getMonthGrid(year, mi);
                 const isCurrentMonth = mi === month;

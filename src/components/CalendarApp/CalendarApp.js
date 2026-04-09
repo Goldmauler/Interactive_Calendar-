@@ -18,14 +18,14 @@ import { generateId, safeGetItem, safeSetItem } from '@/utils/storageUtils';
 import styles from './CalendarApp.module.css';
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
-const getMoonPhase = (date) => {
-  const phases = ['🌑','🌒','🌓','🌔','🌕','🌖','🌗','🌘'];
+const getMoonPhaseIndex = (date) => {
   const knownNew = new Date('2000-01-06').getTime();
   const synodicPeriod = 29.53058867;
   const daysSince = (date.getTime() - knownNew) / 86400000;
-  const phaseIndex = Math.floor(((daysSince % synodicPeriod) / synodicPeriod) * 8);
-  return phases[(phaseIndex + 8) % 8];
+  return Math.floor(((daysSince % synodicPeriod) / synodicPeriod) * 8 + 8) % 8;
 };
+
+const MOON_PHASE_OPACITY = [0.2, 0.3, 0.45, 0.65, 0.95, 0.65, 0.45, 0.3];
 
 const getDaysUntil = (date) => {
   const today = new Date(); today.setHours(0,0,0,0);
@@ -152,11 +152,11 @@ export default function CalendarApp() {
   }, [year]);
 
   useEffect(() => {
-    if (Object.keys(notes).length > 0) safeSetItem('cal-notes', notes);
+    safeSetItem('cal-notes', notes);
   }, [notes]);
 
   useEffect(() => {
-    if (Object.keys(events).length > 0) safeSetItem('cal-events', events);
+    safeSetItem('cal-events', events);
   }, [events]);
 
   useEffect(() => {
@@ -676,35 +676,34 @@ export default function CalendarApp() {
 
             <div className={styles.notesSection}>
                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
-                 <div style={{ display: 'flex', gap: '1rem' }}>
-                   <span 
+                 <div className={styles.tabsRow}>
+                   <button
                      onClick={() => setActiveTab('notes')}
-                     className={styles.notesTitle} 
-                     style={{ display: 'block', fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer', paddingBottom: '2px', borderBottom: activeTab === 'notes' ? '2px solid var(--accent-color)' : '2px solid transparent', color: activeTab === 'notes' ? 'var(--text-primary)' : 'var(--text-muted)' }}
+                     className={clsx(styles.tabButton, activeTab === 'notes' && styles.tabButtonActive)}
                    >
                      Notes
-                   </span>
-                   <span 
+                   </button>
+
+                   <button
                      onClick={() => setActiveTab('events')}
-                     className={styles.notesTitle} 
-                     style={{ display: 'block', fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer', paddingBottom: '2px', borderBottom: activeTab === 'events' ? '2px solid var(--accent-color)' : '2px solid transparent', color: activeTab === 'events' ? 'var(--text-primary)' : 'var(--text-muted)' }}
+                     className={clsx(styles.tabButton, activeTab === 'events' && styles.tabButtonActive)}
                    >
                      Events
-                   </span>
-                   <span 
+                   </button>
+
+                   <button
                      onClick={() => setActiveTab('habits')}
-                     className={styles.notesTitle} 
-                     style={{ display: 'block', fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer', paddingBottom: '2px', borderBottom: activeTab === 'habits' ? '2px solid var(--accent-color)' : '2px solid transparent', color: activeTab === 'habits' ? 'var(--text-primary)' : 'var(--text-muted)' }}
+                     className={clsx(styles.tabButton, activeTab === 'habits' && styles.tabButtonActive)}
                    >
                      Habits
-                   </span>
-                   <span 
+                   </button>
+
+                   <button
                      onClick={() => setActiveTab('festivals')}
-                     className={styles.notesTitle} 
-                     style={{ display: 'block', fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer', paddingBottom: '2px', borderBottom: activeTab === 'festivals' ? '2px solid var(--accent-color)' : '2px solid transparent', color: activeTab === 'festivals' ? 'var(--accent-color)' : 'var(--text-muted)' }}
+                     className={clsx(styles.tabButton, activeTab === 'festivals' && styles.tabButtonActive)}
                    >
-                     🎉 Festivals
-                   </span>
+                     Festivals
+                   </button>
                  </div>
                  
                  <div style={{ display: 'flex', gap: '0.5rem' }}>
@@ -740,7 +739,6 @@ export default function CalendarApp() {
                      {currentNotes.map(n => (
                        <motion.div 
                          key={n.id} 
-                         layoutId={`note-${n.id}`}
                          drag
                          dragConstraints={constraintsRef}
                          dragElastic={0.2}
@@ -897,7 +895,9 @@ export default function CalendarApp() {
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                               <div style={{ flex: 1 }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: 2 }}>
-                                  <span style={{ fontSize: '1rem' }}>{ftype.emoji}</span>
+                                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', color: ftype.color }}>
+                                    {fest.type === 'muslim' ? <Moon size={13} strokeWidth={2} /> : <Sparkles size={12} strokeWidth={2} />}
+                                  </span>
                                   <span style={{
                                     fontWeight: 700, fontSize: '0.82rem', color: ftype.color,
                                     ...(isDiwali ? { textShadow: `0 0 8px ${ftype.color}` } : {})
@@ -910,7 +910,7 @@ export default function CalendarApp() {
                                 </div>
                               </div>
                               <div style={{ textAlign: 'right', flexShrink: 0, marginLeft: '0.5rem' }}>
-                                {dUntil === 0 && <span style={{ fontSize: '0.7rem', fontWeight: 800, color: '#16A34A', background: '#DCFCE7', borderRadius: 4, padding: '2px 6px' }}>Today! 🎊</span>}
+                                {dUntil === 0 && <span style={{ fontSize: '0.7rem', fontWeight: 800, color: '#16A34A', background: '#DCFCE7', borderRadius: 4, padding: '2px 6px' }}>Today!</span>}
                                 {dUntil > 0 && <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>in {dUntil}d</span>}
                                 {dUntil < 0 && <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', opacity: 0.5 }}>Past</span>}
                               </div>
@@ -924,7 +924,7 @@ export default function CalendarApp() {
                       })}
                     </div>
                     <div style={{ fontSize: '0.65rem', color: 'var(--text-muted)', textAlign: 'center', marginTop: '0.25rem' }}>
-                      Click any festival to celebrate! ✨
+                      Tap any festival card to celebrate.
                     </div>
                   </div>
                 ) : (
@@ -968,7 +968,7 @@ export default function CalendarApp() {
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                                   {streak > 0 && (
                                     <span style={{ fontSize: '0.75rem', color: '#f59e0b', display: 'flex', alignItems: 'center', gap: '2px', fontWeight: 700 }}>
-                                      🔥 {streak}
+                                      <Flame size={12} /> {streak}
                                     </span>
                                   )}
                                   <button
@@ -1040,6 +1040,7 @@ export default function CalendarApp() {
                     {gridDays.map((dObj, idx) => {
                       const d = dObj.date;
                       const dateStr = d.toDateString();
+                      const moonPhaseIndex = getMoonPhaseIndex(d);
                       
                       const startDay = isSameDay(d, selectedStart);
                       const endDay = selectionMode === 'range' && isSameDay(d, selectedEnd);
@@ -1102,7 +1103,7 @@ export default function CalendarApp() {
                             {d.getDate()}
                             {dObj.isCurrentMonth && (
                               <span style={{ fontSize: '0.55rem', display: 'block', lineHeight: 1.1, color: festival ? (FESTIVAL_TYPES[festival.type] || FESTIVAL_TYPES.national).color : 'var(--text-muted)', userSelect: 'none' }}>
-                                {festival ? (FESTIVAL_TYPES[festival.type] || FESTIVAL_TYPES.national).emoji : getMoonPhase(d)}
+                                {festival ? <Sparkles size={8} strokeWidth={2} /> : <Moon size={8} strokeWidth={1.8} style={{ opacity: MOON_PHASE_OPACITY[moonPhaseIndex] }} />}
                               </span>
                             )}
                           </div>
@@ -1160,7 +1161,6 @@ export default function CalendarApp() {
               if (!n) return null;
               return (
                 <motion.div 
-                  layoutId={`note-${n.id}`}
                   className={styles.focusCard}
                   onClick={(e) => e.stopPropagation()}
                 >

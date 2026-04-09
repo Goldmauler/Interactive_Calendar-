@@ -157,6 +157,39 @@
   letter-spacing: 0.05em;
 }
 
+.tabsRow {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  min-width: 0;
+  align-items: center;
+}
+
+.tabButton {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.24rem 0.52rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  background-color: var(--bg-panel);
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.tabButton:hover {
+  color: var(--text-primary);
+  border-color: var(--border-darker);
+}
+
+.tabButtonActive {
+  color: var(--text-primary);
+  border-color: var(--accent-color);
+  background-color: var(--accent-color-light);
+  box-shadow: 0 0 0 1px rgba(255, 107, 0, 0.12) inset;
+}
+
 .clockIcon {
   opacity: 0.7;
 }
@@ -311,7 +344,7 @@
 .noteTextareaLined {
   width: 100%;
   flex: 1;
-  min-height: 150px;
+  min-height: 190px;
   resize: none;
   border: none;
   background-color: transparent;
@@ -581,4 +614,111 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 1rem 0.75rem;
+    align-items: flex-start;
+  }
+
+  .calendarCard {
+    max-width: 100%;
+  }
+
+  .leftColumn {
+    padding: 1.2rem;
+  }
+
+  .gridSection {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0.65rem 0.45rem;
+  }
+
+  .topImageBanner {
+    height: 140px;
+  }
+
+  .bottomContent {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .leftColumn,
+  .rightColumn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .leftColumn {
+    padding: 0.95rem;
+  }
+
+  .rightColumn {
+    min-height: 420px;
+  }
+
+  .wireBinding {
+    display: none;
+  }
+
+  .monthLabel {
+    font-size: 1.85rem;
+  }
+
+  .yearRowWrapper {
+    gap: 0.6rem;
+  }
+
+  .tabsRow {
+    gap: 0.55rem;
+  }
+
+  .tabButton {
+    font-size: 0.75rem;
+    padding: 0.22rem 0.44rem;
+  }
+
+  .noteTextareaLined {
+    min-height: 140px;
+  }
+
+  .gridSection {
+    padding: 0.7rem;
+  }
+
+  .weekdaysHeader {
+    margin-bottom: 0.5rem;
+  }
+
+  .weekday {
+    font-size: 0.62rem;
+    letter-spacing: 0.02em;
+  }
+
+  .daysGrid {
+    gap: 0.14rem;
+  }
+
+  .dayBg {
+    height: 2.1rem;
+  }
+
+  .dayContent {
+    width: min(2.05rem, calc((100vw - 1.9rem) / 7));
+    height: min(2.05rem, calc((100vw - 1.9rem) / 7));
+    font-size: 0.8rem;
+  }
+
+  .themeToggle {
+    width: 42px;
+    height: 42px;
+    bottom: 0.7rem;
+    right: 0.7rem;
+  }
 }

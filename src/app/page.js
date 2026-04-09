@@ -1,9 +1,9 @@
-import CalendarApp from '@/components/CalendarApp/CalendarApp';
+import LandingPage from '@/components/LandingPage/LandingPage';
 
 export default function Page() {
   return (
     <main>
-      <CalendarApp />
+      <LandingPage />
     </main>
   );
 }

@@ -2,8 +2,8 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/LandingPage/LandingPage.module.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************/
 .LandingPage_pageRoot__Oc2Ui {
-  background: #0a0f1e;
-  color: #f8fafc;
+  background: linear-gradient(180deg, var(--bg-calendar) 0%, var(--bg-calendar) 55%, var(--bg-page) 100%);
+  color: var(--text-primary);
   min-height: 100vh;
 }
 
@@ -14,13 +14,13 @@
   right: 0;
   height: 2px;
   z-index: 110;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(148, 163, 184, 0.35);
 }
 
 .LandingPage_progressFill__1BjjK {
   display: block;
   height: 100%;
-  background: #f97316;
+  background: var(--accent-color);
   transition: width 120ms linear;
 }
 
@@ -35,8 +35,8 @@
 .LandingPage_navBar__ciJ4m {
   margin: 0 auto;
   max-width: 1180px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(10, 15, 30, 0.62);
+  border: 1px solid var(--border-darker);
+  background: var(--bg-panel);
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
   border-radius: 14px;
@@ -48,10 +48,28 @@
 }
 
 .LandingPage_brand__PXXVx {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.LandingPage_brandLogo__Ovhfs {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 999px;
+  background: rgba(243, 244, 246, 1);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  padding: 2px;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
+}
+
+.LandingPage_brandText__QRNHz {
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--text-primary);
 }
 
 .LandingPage_navList__8tUGn {
@@ -60,19 +78,20 @@
 }
 
 .LandingPage_navLink__jRY1N {
-  color: #cbd5e1;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.86rem;
 }
 
 .LandingPage_navLink__jRY1N:hover {
-  color: #f8fafc;
+  color: var(--text-primary);
 }
 
 .LandingPage_navButton__LEg21 {
   text-decoration: none;
-  color: #0a0f1e;
-  background: #f97316;
+  color: var(--selection-text);
+  background: var(--accent-color);
+  border: 1px solid transparent;
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 700;
@@ -141,7 +160,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #fdba74;
+  color: var(--accent-color);
   margin-bottom: 1rem;
 }
 
@@ -167,7 +186,7 @@
 }
 
 .LandingPage_heroSub__WZjvg {
-  color: #cbd5e1;
+  color: var(--text-secondary);
   max-width: 520px;
   font-size: 1.03rem;
   line-height: 1.6;
@@ -194,22 +213,23 @@
 }
 
 .LandingPage_ctaPrimary___PcOa {
-  color: #0a0f1e;
-  background: #f97316;
+  color: var(--selection-text);
+  background: var(--accent-color);
+  border-color: transparent;
 }
 
 .LandingPage_ctaPrimary___PcOa:hover {
-  background: #fb923c;
+  background: var(--accent-color-hover);
 }
 
 .LandingPage_ctaGhost__7UZZN {
-  color: #f8fafc;
-  border-color: rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+  border-color: var(--border-darker);
+  background: var(--bg-panel);
 }
 
 .LandingPage_ctaGhost__7UZZN:hover {
-  border-color: rgba(255, 255, 255, 0.34);
+  border-color: rgba(100, 116, 139, 0.55);
 }
 
 .LandingPage_heroPreviewCard__dUz1o {
@@ -218,10 +238,9 @@
   justify-self: end;
   aspect-ratio: 4 / 3;
   border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-darker);
+  background: var(--bg-panel);
   overflow: hidden;
-  opacity: 0.7;
-  filter: blur(0.4px);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
   transform: translateZ(0);
 }
@@ -242,14 +261,14 @@
 }
 
 .LandingPage_orbOne__qhq2K {
-  background: #f97316;
+  background: rgba(203, 213, 225, 0.9);
   left: -70px;
   top: 18%;
   animation: LandingPage_orbDriftA__YRb5A 14s ease-in-out infinite alternate;
 }
 
 .LandingPage_orbTwo__ePz_K {
-  background: #6366f1;
+  background: rgba(148, 163, 184, 0.9);
   right: -90px;
   bottom: 10%;
   animation: LandingPage_orbDriftB__85Lso 18s ease-in-out infinite alternate;
@@ -283,7 +302,7 @@
 }
 
 .LandingPage_sectionHead__fivaw p {
-  color: #9ca3af;
+  color: var(--text-secondary);
   line-height: 1.65;
 }
 
@@ -295,10 +314,10 @@
 }
 
 .LandingPage_featureCard__f1Wyj {
-  background: #f5f0e8;
-  color: #0f172a;
+  background: var(--bg-panel);
+  color: var(--text-primary);
   border-radius: 18px;
-  border: 1px solid rgba(10, 15, 30, 0.1);
+  border: 1px solid var(--border-darker);
   padding: 1rem;
   min-height: 150px;
   transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
@@ -318,12 +337,12 @@
 
 .LandingPage_featureCard__f1Wyj:hover {
   transform: scale(1.02);
-  border-color: #f97316;
-  box-shadow: 0 14px 30px rgba(249, 115, 22, 0.18);
+  border-color: var(--accent-color);
+  box-shadow: 0 14px 30px rgba(255, 107, 0, 0.18);
 }
 
 .LandingPage_featureIcon__TsuBR {
-  color: #f97316;
+  color: var(--accent-color);
   margin-bottom: 0.75rem;
 }
 
@@ -333,7 +352,7 @@
 }
 
 .LandingPage_featureCard__f1Wyj p {
-  color: #64748b;
+  color: var(--text-secondary);
   font-size: 0.75rem;
   line-height: 1.5;
 }
@@ -351,7 +370,7 @@
   position: relative;
   width: min(100%, 390px);
   border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(148, 163, 184, 0.3);
   overflow: hidden;
   background: #020617;
   box-shadow: 0 25px 55px rgba(0, 0, 0, 0.5);
@@ -387,21 +406,21 @@
 }
 
 .LandingPage_proofStrip__vqPLB > div {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-darker);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-panel);
   padding: 1rem;
 }
 
 .LandingPage_proofStrip__vqPLB strong {
   display: block;
-  color: #f5f0e8;
+  color: var(--text-primary);
   font-size: 1.35rem;
   margin-bottom: 0.2rem;
 }
 
 .LandingPage_proofStrip__vqPLB span {
-  color: #9ca3af;
+  color: var(--text-secondary);
   font-size: 0.86rem;
 }
 
@@ -418,7 +437,7 @@
 }
 
 .LandingPage_ctaSection___3KtY p {
-  color: #9ca3af;
+  color: var(--text-secondary);
   max-width: 640px;
   margin: 0 auto 1.2rem;
   line-height: 1.6;
@@ -432,14 +451,31 @@
 }
 
 .LandingPage_footer__rx660 {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border-darker);
   padding: 1.1rem 1rem 2rem;
   text-align: center;
 }
 
 .LandingPage_footer__rx660 p {
-  color: #94a3b8;
+  color: var(--text-secondary);
   font-size: 0.82rem;
+}
+
+.LandingPage_themeToggle__VTzJG {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--bg-panel);
+  color: var(--text-primary);
+  border: 1px solid var(--border-darker);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 120;
 }
 
 .LandingPage_footer__rx660 p + p {

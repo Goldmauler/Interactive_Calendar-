@@ -12,6 +12,8 @@ import {
   LayoutGrid,
   ChevronRight,
   PlayCircle,
+  Moon,
+  Sun,
 } from 'lucide-react';
 import styles from './LandingPage.module.css';
 
@@ -79,6 +81,7 @@ export default function LandingPage() {
   const progressFillRef = useRef(null);
 
   const [heroTextVisible, setHeroTextVisible] = useState(false);
+  const [theme, setTheme] = useState('light');
 
   const navLinks = useMemo(
     () => [
@@ -94,6 +97,19 @@ export default function LandingPage() {
     const t = setTimeout(() => setHeroTextVisible(true), 120);
     return () => clearTimeout(t);
   }, []);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('cal-theme') || 'light';
+    setTheme(savedTheme);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(nextTheme);
+    document.documentElement.setAttribute('data-theme', nextTheme);
+    localStorage.setItem('cal-theme', nextTheme);
+  };
 
   useEffect(() => {
     let raf = 0;
@@ -234,9 +250,9 @@ export default function LandingPage() {
               Notes, events, habits, festivals - all in one place.
             </p>
             <div className={styles.heroCtas}>
-              <a href="#cta" className={styles.ctaPrimary}>
+              <Link href="/calendar" className={styles.ctaPrimary}>
                 Try it free <ChevronRight size={16} />
-              </a>
+              </Link>
               <a href="#preview" className={styles.ctaGhost}>
                 <PlayCircle size={16} /> Watch demo
               </a>
@@ -328,6 +344,14 @@ export default function LandingPage() {
         <p>{APP_NAME} - Interactive Calendar Experience</p>
         <p>Designed for focused planning on desktop and mobile.</p>
       </footer>
+
+      <button
+        onClick={toggleTheme}
+        className={styles.themeToggle}
+        aria-label="Toggle Theme"
+      >
+        {theme === 'light' ? <Moon size={22} /> : <Sun size={22} />}
+      </button>
     </main>
   );
 }

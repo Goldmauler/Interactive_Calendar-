@@ -1,6 +1,6 @@
 .pageRoot {
-  background: linear-gradient(180deg, rgba(243, 244, 246, 1) 0%, rgba(243, 244, 246, 1) 55%, rgba(236, 238, 242, 1) 100%);
-  color: #0f172a;
+  background: linear-gradient(180deg, var(--bg-calendar) 0%, var(--bg-calendar) 55%, var(--bg-page) 100%);
+  color: var(--text-primary);
   min-height: 100vh;
 }
 
@@ -17,7 +17,7 @@
 .progressFill {
   display: block;
   height: 100%;
-  background: #64748b;
+  background: var(--accent-color);
   transition: width 120ms linear;
 }
 
@@ -31,8 +31,8 @@
 .navBar {
   margin: 0 auto;
   max-width: 1180px;
-  border: 1px solid rgba(148, 163, 184, 0.35);
-  background: rgba(243, 244, 246, 0.9);
+  border: 1px solid var(--border-darker);
+  background: var(--bg-panel);
   backdrop-filter: blur(12px);
   border-radius: 14px;
   display: flex;
@@ -64,7 +64,7 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #0f172a;
+  color: var(--text-primary);
 }
 
 .navList {
@@ -73,20 +73,20 @@
 }
 
 .navLink {
-  color: #334155;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.86rem;
 }
 
 .navLink:hover {
-  color: #0f172a;
+  color: var(--text-primary);
 }
 
 .navButton {
   text-decoration: none;
-  color: #0f172a;
-  background: rgba(243, 244, 246, 1);
-  border: 1px solid rgba(148, 163, 184, 0.45);
+  color: var(--selection-text);
+  background: var(--accent-color);
+  border: 1px solid transparent;
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 700;
@@ -153,7 +153,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #334155;
+  color: var(--accent-color);
   margin-bottom: 1rem;
 }
 
@@ -179,7 +179,7 @@
 }
 
 .heroSub {
-  color: #334155;
+  color: var(--text-secondary);
   max-width: 520px;
   font-size: 1.03rem;
   line-height: 1.6;
@@ -206,19 +206,19 @@
 }
 
 .ctaPrimary {
-  color: #0f172a;
-  background: rgba(243, 244, 246, 1);
-  border-color: rgba(148, 163, 184, 0.45);
+  color: var(--selection-text);
+  background: var(--accent-color);
+  border-color: transparent;
 }
 
 .ctaPrimary:hover {
-  background: rgba(229, 231, 235, 1);
+  background: var(--accent-color-hover);
 }
 
 .ctaGhost {
-  color: #334155;
-  border-color: rgba(148, 163, 184, 0.45);
-  background: rgba(243, 244, 246, 0.88);
+  color: var(--text-primary);
+  border-color: var(--border-darker);
+  background: var(--bg-panel);
 }
 
 .ctaGhost:hover {
@@ -231,8 +231,8 @@
   justify-self: end;
   aspect-ratio: 4 / 3;
   border-radius: 22px;
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  background: rgba(243, 244, 246, 1);
+  border: 1px solid var(--border-darker);
+  background: var(--bg-panel);
   overflow: hidden;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
   transform: translateZ(0);
@@ -295,7 +295,7 @@
 }
 
 .sectionHead p {
-  color: #475569;
+  color: var(--text-secondary);
   line-height: 1.65;
 }
 
@@ -306,10 +306,10 @@
 }
 
 .featureCard {
-  background: #f5f0e8;
-  color: #0f172a;
+  background: var(--bg-panel);
+  color: var(--text-primary);
   border-radius: 18px;
-  border: 1px solid rgba(10, 15, 30, 0.1);
+  border: 1px solid var(--border-darker);
   padding: 1rem;
   min-height: 150px;
   transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
@@ -329,12 +329,12 @@
 
 .featureCard:hover {
   transform: scale(1.02);
-  border-color: #f97316;
-  box-shadow: 0 14px 30px rgba(249, 115, 22, 0.18);
+  border-color: var(--accent-color);
+  box-shadow: 0 14px 30px rgba(255, 107, 0, 0.18);
 }
 
 .featureIcon {
-  color: #f97316;
+  color: var(--accent-color);
   margin-bottom: 0.75rem;
 }
 
@@ -344,7 +344,7 @@
 }
 
 .featureCard p {
-  color: #64748b;
+  color: var(--text-secondary);
   font-size: 0.75rem;
   line-height: 1.5;
 }
@@ -397,21 +397,21 @@
 }
 
 .proofStrip > div {
-  border: 1px solid rgba(148, 163, 184, 0.28);
+  border: 1px solid var(--border-darker);
   border-radius: 14px;
-  background: rgba(243, 244, 246, 1);
+  background: var(--bg-panel);
   padding: 1rem;
 }
 
 .proofStrip strong {
   display: block;
-  color: #0f172a;
+  color: var(--text-primary);
   font-size: 1.35rem;
   margin-bottom: 0.2rem;
 }
 
 .proofStrip span {
-  color: #475569;
+  color: var(--text-secondary);
   font-size: 0.86rem;
 }
 
@@ -428,7 +428,7 @@
 }
 
 .ctaSection p {
-  color: #475569;
+  color: var(--text-secondary);
   max-width: 640px;
   margin: 0 auto 1.2rem;
   line-height: 1.6;
@@ -442,14 +442,31 @@
 }
 
 .footer {
-  border-top: 1px solid rgba(148, 163, 184, 0.22);
+  border-top: 1px solid var(--border-darker);
   padding: 1.1rem 1rem 2rem;
   text-align: center;
 }
 
 .footer p {
-  color: #475569;
+  color: var(--text-secondary);
   font-size: 0.82rem;
+}
+
+.themeToggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--bg-panel);
+  color: var(--text-primary);
+  border: 1px solid var(--border-darker);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 120;
 }
 
 .footer p + p {

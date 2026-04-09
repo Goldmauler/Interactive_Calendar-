@@ -1,593 +1,530 @@
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/CalendarApp/CalendarApp.module.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/LandingPage/LandingPage.module.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************/
-/* CalendarApp.module.css */
-.CalendarApp_container__69YOf {
+.LandingPage_pageRoot__Oc2Ui {
+  background: #0a0f1e;
+  color: #f8fafc;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 1rem;
 }
 
-.CalendarApp_calendarCard__3DsO_ {
-  width: 100%;
-  max-width: 1200px;
-  background-color: var(--bg-panel);
-  border-radius: 12px;
-  box-shadow: var(--shadow-lg);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  position: relative;
-  transition: background-color 0.3s;
-}
-
-@media (min-width: 768px) {
-  .CalendarApp_calendarCard__3DsO_ {
-    flex-direction: column;
-    height: 800px;
-  }
-}
-
-.CalendarApp_topImageBanner__BjkE2 {
-  height: 35%;
-  display: flex;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.CalendarApp_heroImageHalf__D0RF7 {
-  flex: 1 1;
-  position: relative;
-  height: 100%;
-}
-
-.CalendarApp_bottomContent__y1te0 {
-  height: 65%;
-  display: flex;
-  flex-direction: row;
-}
-
-.CalendarApp_leftColumn__Zj_2_ {
-  flex: 1 1;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  border-right: 1px solid var(--border-subtle);
-  background-color: var(--bg-panel);
-  z-index: 10;
-}
-
-@media (max-width: 767px) {
-  .CalendarApp_leftColumn__Zj_2_ {
-    border-right: none;
-    border-bottom: 1px solid var(--border-subtle);
-  }
-}
-
-.CalendarApp_rightColumn__a_XH_ {
-  flex: 1.5 1;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--bg-panel);
-  position: relative;
-}
-
-
-.CalendarApp_wireBinding__HHDJ1 {
-  position: absolute;
-  top: -8px;
-  left: 0;
-  right: 0;
-  height: 24px;
-  display: flex;
-  justify-content: space-around;
-  z-index: 50;
-  pointer-events: none;
-}
-
-.CalendarApp_coil__e_cd4 {
-  width: 10px;
-  height: 24px;
-  background-color: #6b7280;
-  border-radius: 8px;
-  box-shadow: inset 2px 2px 4px rgba(255,255,255,0.3), inset -2px -2px 4px rgba(0,0,0,0.5);
-  border: 1px solid #4b5563;
-}
-
-/* Header & Controls */
-.CalendarApp_headerNav__xmJ_b {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-}
-
-.CalendarApp_navButtonGroup__hIM6F {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.CalendarApp_iconButton__tDh8k {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--border-subtle);
-  color: var(--text-primary);
-  transition: all 0.2s;
-}
-
-.CalendarApp_iconButton__tDh8k:hover:not(:disabled) {
-  background-color: var(--accent-color);
-  color: white;
-  transform: scale(1.05);
-}
-
-.CalendarApp_iconButton__tDh8k:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.CalendarApp_monthLabelWrap__ALmWa {
-  margin-bottom: 2rem;
-  position: relative;
-  height: auto;
-}
-
-.CalendarApp_monthLabel__218KM {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0;
-  line-height: 1.2;
-}
-
-.CalendarApp_yearRowWrapper___zv4U {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-  color: var(--text-muted);
-  font-size: 1rem;
-}
-
-.CalendarApp_yearLabel__SOdIs {
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-}
-
-.CalendarApp_clockIcon__Z7N3n {
-  opacity: 0.7;
-}
-
-/* Notes Section */
-.CalendarApp_notesSection__qFdqi {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1;
-  min-height: 0;
-}
-
-.CalendarApp_notesHeader__tOa5q {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.CalendarApp_notesTitle__cR06R {
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
-.CalendarApp_notesList__LbOaU {
-  flex: 1 1;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding-right: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.CalendarApp_noteItem__avdYE {
-  background-color: var(--border-subtle);
-  border-radius: 8px;
-  position: relative;
-  transition: box-shadow 0.2s, transform 0.2s;
-  cursor: -webkit-grab;
-  cursor: grab;
-  /* CSS Resize natively */
-  resize: both;
-  overflow: hidden;
-  min-width: 150px;
-  min-height: 80px;
-  display: flex;
-  flex-direction: column;
-}
-.CalendarApp_noteItem__avdYE:active {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-.CalendarApp_noteInner__qfFDb {
-  padding: 1rem;
-  flex: 1 1;
-  display: flex;
-  flex-direction: column;
-  pointer-events: auto;
-}
-
-.CalendarApp_noteItem__avdYE:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
-}
-
-.CalendarApp_noteText__qlySD {
-  font-size: 0.875rem;
-  white-space: pre-wrap;
-  margin-bottom: 0.5rem;
-  color: var(--text-primary);
-}
-
-.CalendarApp_noteMeta__95iYB {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.75rem;
-  color: var(--text-muted);
-}
-
-.CalendarApp_noteActions__cFw1b {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.CalendarApp_noteActionButton__99EWO {
-  color: var(--text-muted);
-}
-.CalendarApp_noteActionButton__99EWO:hover {
-  color: var(--accent-color);
-}
-
-.CalendarApp_pickerDropdown__42cwj {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--bg-panel);
-  border: 1px solid var(--border-darker);
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: var(--shadow-lg);
-  z-index: 100;
-  width: 280px;
-}
-
-.CalendarApp_pickerGrid__wgmG9 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.5rem;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.CalendarApp_pickerBtn__rfMnG {
-  padding: 0.5rem;
-  border-radius: 4px;
-  font-size: 0.875rem;
-  background-color: var(--border-subtle);
-  color: var(--text-primary);
-  transition: background-color 0.2s;
-}
-
-.CalendarApp_pickerBtn__rfMnG:hover {
-  background-color: var(--cell-hover);
-}
-
-.CalendarApp_pickerBtnActive__R2xjR {
-  background-color: var(--accent-color);
-  color: white;
-}
-
-.CalendarApp_pickerYearRow__lwq0x {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 600;
-  padding-top: 0.5rem;
-  border-top: 1px solid var(--border-subtle);
-}
-
-.CalendarApp_pickerYearRow__lwq0x button {
-  padding: 0.25rem 0.5rem;
-  background-color: var(--border-subtle);
-  border-radius: 4px;
-}
-
-
-.CalendarApp_noteAddArea__BLEzE {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.CalendarApp_noteTextareaLined__WB2pF {
-  width: 100%;
-  flex: 1 1;
-  min-height: 150px;
-  resize: none;
-  border: none;
-  background-color: transparent;
-  background-image: repeating-linear-gradient(transparent, transparent 31px, var(--border-darker) 31px, var(--border-darker) 32px);
-  line-height: 32px;
-  padding: 0 0.25rem;
-  color: var(--text-primary);
-  font-family: inherit;
-}
-
-.CalendarApp_noteTextareaLined__WB2pF:focus {
-  outline: none;
-}
-
-.CalendarApp_saveNoteBtn__pZk6y {
-  align-self: center;
-  background-color: var(--accent-color);
-  color: white;
-  padding: 0.6rem 2rem;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: background-color 0.2s;
-  margin-top: 1rem;
-}
-
-.CalendarApp_saveNoteBtn__pZk6y:hover:not(:disabled) {
-  background-color: var(--accent-color-hover);
-}
-
-.CalendarApp_saveNoteBtn__pZk6y:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.CalendarApp_focusOverlay__zPA_V {
+.LandingPage_progressTrack___7vr1 {
   position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.4);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
-  z-index: 9999;
-  padding: 2rem;
-}
-
-.CalendarApp_focusCard__cLZrz {
-  background-color: var(--bg-panel);
-  border-radius: 16px;
-  padding: 2rem;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-/* Right Col: Hero & Grid */
-.CalendarApp_heroSection__0_c5t {
-  height: 40%;
-  position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.CalendarApp_heroImage__GLzr7 {
-  object-fit: cover;
-  transition: transform 10s ease-out; /* Ken Burns base */
-}
-
-/* Page flip overlay styling */
-.CalendarApp_flipContainerWrapper__5_ae5 {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  position: relative;
-  perspective: 2000px;
-}
-
-.CalendarApp_flipInner__sbrkY {
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--bg-calendar);
+  height: 2px;
+  z-index: 110;
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.CalendarApp_gridSection__kwx7A {
-  flex: 1 1;
+.LandingPage_progressFill__1BjjK {
+  display: block;
+  height: 100%;
+  background: #f97316;
+  transition: width 120ms linear;
+}
+
+.LandingPage_navWrap__wSNHI {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0.9rem 1rem;
+}
+
+.LandingPage_navBar__ciJ4m {
+  margin: 0 auto;
+  max-width: 1180px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(10, 15, 30, 0.62);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  border-radius: 14px;
   display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 0.9rem;
+}
+
+.LandingPage_brand__PXXVx {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.LandingPage_navList__8tUGn {
+  display: none;
+  gap: 0.8rem;
+}
+
+.LandingPage_navLink__jRY1N {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.86rem;
+}
+
+.LandingPage_navLink__jRY1N:hover {
+  color: #f8fafc;
+}
+
+.LandingPage_navButton__LEg21 {
+  text-decoration: none;
+  color: #0a0f1e;
+  background: #f97316;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.45rem 0.8rem;
+}
+
+.LandingPage_hero__5MNxg {
   position: relative;
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 3.6rem 1rem 2.2rem;
 }
 
-.CalendarApp_weekdaysHeader__6wWgy {
+.LandingPage_heroBg__fmt1c {
+  position: absolute;
+  inset: -8%;
+  z-index: 0;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.LandingPage_starField__mDCOa {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.35) 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 35%, rgba(255, 255, 255, 0.26) 0 1px, transparent 2px),
+    radial-gradient(circle at 42% 82%, rgba(255, 255, 255, 0.28) 0 1px, transparent 2px),
+    radial-gradient(circle at 86% 72%, rgba(255, 255, 255, 0.32) 0 1px, transparent 2px),
+    radial-gradient(circle at 28% 61%, rgba(255, 255, 255, 0.24) 0 1px, transparent 2px);
+  opacity: 0.55;
+}
+
+.LandingPage_gridField__LEz6d {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 34px 34px;
+  -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 95%);
+          mask-image: radial-gradient(circle at center, black 50%, transparent 95%);
+  opacity: 0.24;
+}
+
+.LandingPage_heroInner__mpYnB {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 2rem;
+  gap: 2rem;
+  align-items: center;
+}
+
+.LandingPage_heroContent__l5WyY {
+  max-width: 620px;
+}
+
+.LandingPage_kicker__tmbCP {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fdba74;
   margin-bottom: 1rem;
 }
 
-.CalendarApp_weekday__F6VS6 {
-  text-align: center;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  letter-spacing: 0.05em;
+.LandingPage_heroTitle__f_yQE {
+  font-size: clamp(2rem, 7vw, 4.6rem);
+  line-height: 0.98;
+  margin: 0 0 1rem;
 }
 
-.CalendarApp_daysGrid__Cuw39 {
-  flex: 1 1;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  grid-gap: 0.25rem;
-  gap: 0.25rem;
+.LandingPage_charWrap__fvfa9 {
+  display: inline;
 }
 
-.CalendarApp_dayCellWrapper__MDYRp {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.CalendarApp_dayBg__B7EUC {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 2.5rem;
-  transform: translateY(-50%);
-  background-color: var(--accent-color-light);
-  z-index: 1;
-}
-
-.CalendarApp_dayContent__U_gyD {
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  position: relative;
-  z-index: 2;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: all 0.2s;
-  color: var(--text-primary);
-}
-
-.CalendarApp_dayCellWrapper__MDYRp:hover .CalendarApp_dayContent__U_gyD {
-  background-color: var(--cell-hover);
-}
-
-.CalendarApp_dayOutOfMonth__D8y9C .CalendarApp_dayContent__U_gyD {
-  color: var(--text-muted);
-  opacity: 0.5;
-}
-
-.CalendarApp_dayWeekend__M8I2h .CalendarApp_dayContent__U_gyD {
-  color: var(--accent-color);
-}
-
-.CalendarApp_dayToday__5q4TS .CalendarApp_dayContent__U_gyD {
-  background-color: var(--text-primary);
-  color: var(--bg-panel);
-}
-
-.CalendarApp_daySelected__mgt3B .CalendarApp_dayContent__U_gyD {
-  background-color: var(--selection-color);
-  color: var(--selection-text);
-  box-shadow: var(--shadow-sm);
-  font-weight: 700;
-}
-
-.CalendarApp_holidayDot__KHiGN {
-  width: 4px;
-  height: 4px;
-  background-color: var(--holiday-dot);
-  border-radius: 50%;
-  position: absolute;
-  bottom: 0.35rem;
-}
-
-.CalendarApp_noteIndicator__kwz0E {
-  position: absolute;
-  top: 0.35rem;
-  right: 0.35rem;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #f59e0b; /* Amber */
-  border: 1px solid var(--bg-panel);
-}
-
-.CalendarApp_badge__GpSB3 {
+.LandingPage_char__ovRBO {
   display: inline-block;
-  font-size: 0.75rem;
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
-  background-color: var(--accent-color-light);
-  color: var(--accent-color);
-  font-weight: 600;
-  margin-top: 0.5rem;
+  opacity: 0;
+  transform: translateY(26px);
 }
 
-.CalendarApp_themeToggle__L_F_0 {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: var(--bg-panel);
-  color: var(--text-primary);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  box-shadow: var(--shadow-lg);
+.LandingPage_charVisible__FPsJ8 {
+  animation: LandingPage_charIn__wzhVc 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: calc(var(--char-index) * 26ms);
+}
+
+.LandingPage_heroSub__WZjvg {
+  color: #cbd5e1;
+  max-width: 520px;
+  font-size: 1.03rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.LandingPage_heroCtas__KMXMf {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.LandingPage_ctaPrimary___PcOa,
+.LandingPage_ctaGhost__7UZZN {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  z-index: 100;
-  transition: transform 0.2s;
-}
-
-.CalendarApp_themeToggle__L_F_0:hover {
-  transform: scale(1.1);
-}
-
-/* Utility layout fixes for replacing removed tailwind */
-.CalendarApp_flexColGap2__QzY_m {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.CalendarApp_flexJustifyEndGap2__xEms_ {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-}
-
-.CalendarApp_heroGradient__tobyH {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, var(--bg-calendar), transparent);
-  opacity: 0.8;
-}
-
-.CalendarApp_absoluteTopRight__FUJ01 {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 0.75rem;
+  gap: 0.35rem;
+  text-decoration: none;
+  border-radius: 999px;
   font-weight: 700;
-  color: var(--accent-color);
+  font-size: 0.9rem;
+  padding: 0.68rem 1.05rem;
+  border: 1px solid transparent;
 }
 
-.CalendarApp_absoluteMonthWrapper__4fCLx {
+.LandingPage_ctaPrimary___PcOa {
+  color: #0a0f1e;
+  background: #f97316;
+}
+
+.LandingPage_ctaPrimary___PcOa:hover {
+  background: #fb923c;
+}
+
+.LandingPage_ctaGhost__7UZZN {
+  color: #f8fafc;
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.LandingPage_ctaGhost__7UZZN:hover {
+  border-color: rgba(255, 255, 255, 0.34);
+}
+
+.LandingPage_heroPreviewCard__dUz1o {
+  position: relative;
+  width: min(100%, 520px);
+  justify-self: end;
+  aspect-ratio: 4 / 3;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  opacity: 0.7;
+  filter: blur(0.4px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+  transform: translateZ(0);
+}
+
+.LandingPage_heroPreviewImage__fAuCk {
+  object-fit: cover;
+}
+
+.LandingPage_orbOne__qhq2K,
+.LandingPage_orbTwo__ePz_K {
   position: absolute;
-  inset: 0;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.26;
+  pointer-events: none;
+}
+
+.LandingPage_orbOne__qhq2K {
+  background: #f97316;
+  left: -70px;
+  top: 18%;
+  animation: LandingPage_orbDriftA__YRb5A 14s ease-in-out infinite alternate;
+}
+
+.LandingPage_orbTwo__ePz_K {
+  background: #6366f1;
+  right: -90px;
+  bottom: 10%;
+  animation: LandingPage_orbDriftB__85Lso 18s ease-in-out infinite alternate;
+}
+
+.LandingPage_sectionBlock__SQhoY {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 5.4rem 1rem;
+}
+
+.LandingPage_revealReady__VAsn6 {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.LandingPage_revealVisible__krnL1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.LandingPage_sectionHead__fivaw {
+  max-width: 660px;
+  margin-bottom: 1.5rem;
+}
+
+.LandingPage_sectionHead__fivaw h2 {
+  font-size: clamp(1.45rem, 3.5vw, 2.35rem);
+  margin-bottom: 0.4rem;
+}
+
+.LandingPage_sectionHead__fivaw p {
+  color: #9ca3af;
+  line-height: 1.65;
+}
+
+.LandingPage_bentoGrid__Rpmei {
+  display: grid;
+  grid-gap: 0.85rem;
+  gap: 0.85rem;
+  grid-template-columns: 1fr;
+}
+
+.LandingPage_featureCard__f1Wyj {
+  background: #f5f0e8;
+  color: #0f172a;
+  border-radius: 18px;
+  border: 1px solid rgba(10, 15, 30, 0.1);
+  padding: 1rem;
+  min-height: 150px;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.LandingPage_bentoGrid__Rpmei [data-feature-card] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  transition-delay: calc(var(--feature-index) * 100ms);
+}
+
+.LandingPage_featuresVisible__MCL2p [data-feature-card] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.LandingPage_featureCard__f1Wyj:hover {
+  transform: scale(1.02);
+  border-color: #f97316;
+  box-shadow: 0 14px 30px rgba(249, 115, 22, 0.18);
+}
+
+.LandingPage_featureIcon__TsuBR {
+  color: #f97316;
+  margin-bottom: 0.75rem;
+}
+
+.LandingPage_featureCard__f1Wyj h3 {
+  font-size: 1rem;
+  margin-bottom: 0.38rem;
+}
+
+.LandingPage_featureCard__f1Wyj p {
+  color: #64748b;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.LandingPage_previewPinWrap__dpdUd {
+  position: relative;
+  min-height: auto;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 0.6rem 0;
+}
+
+.LandingPage_previewPhoneShell__MbyBe {
+  position: relative;
+  width: min(100%, 390px);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  background: #020617;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.5);
+  padding-top: 30px;
+}
+
+.LandingPage_previewPhoneNotch__0PgoH {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 112px;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.25);
+}
+
+.LandingPage_previewIframe__pX5Rt {
+  width: 100%;
+  height: 760px;
+  border: 0;
+  display: block;
+  background: #0a0f1e;
+}
+
+.LandingPage_proofStrip__vqPLB {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem 4.8rem;
+  display: grid;
+  grid-gap: 0.8rem;
+  gap: 0.8rem;
+}
+
+.LandingPage_proofStrip__vqPLB > div {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+}
+
+.LandingPage_proofStrip__vqPLB strong {
+  display: block;
+  color: #f5f0e8;
+  font-size: 1.35rem;
+  margin-bottom: 0.2rem;
+}
+
+.LandingPage_proofStrip__vqPLB span {
+  color: #9ca3af;
+  font-size: 0.86rem;
+}
+
+.LandingPage_ctaSection___3KtY {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1rem 5.5rem;
+  text-align: center;
+}
+
+.LandingPage_ctaSection___3KtY h2 {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  margin-bottom: 0.5rem;
+}
+
+.LandingPage_ctaSection___3KtY p {
+  color: #9ca3af;
+  max-width: 640px;
+  margin: 0 auto 1.2rem;
+  line-height: 1.6;
+}
+
+.LandingPage_ctaRow__7t59H {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.LandingPage_footer__rx660 {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.1rem 1rem 2rem;
+  text-align: center;
+}
+
+.LandingPage_footer__rx660 p {
+  color: #94a3b8;
+  font-size: 0.82rem;
+}
+
+.LandingPage_footer__rx660 p + p {
+  margin-top: 0.2rem;
+}
+
+@keyframes LandingPage_charIn__wzhVc {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes LandingPage_orbDriftA__YRb5A {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(50px, -30px, 0);
+  }
+}
+
+@keyframes LandingPage_orbDriftB__85Lso {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-45px, 30px, 0);
+  }
+}
+
+@media (min-width: 840px) {
+  .LandingPage_navList__8tUGn {
+    display: flex;
+  }
+
+  .LandingPage_heroInner__mpYnB {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 480px);
+  }
+
+  .LandingPage_bentoGrid__Rpmei {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: minmax(155px, auto);
+  }
+
+  .LandingPage_featureLarge__58rvx {
+    grid-column: span 2;
+    min-height: 170px;
+  }
+
+  .LandingPage_proofStrip__vqPLB {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 839px) {
+  .LandingPage_hero__5MNxg {
+    min-height: auto;
+    padding-top: 2.2rem;
+  }
+
+  .LandingPage_previewFrame__0RpfY {
+    min-height: auto;
+  }
+
+  .LandingPage_previewIframe__pX5Rt {
+    height: 620px;
+  }
+
+  .LandingPage_orbOne__qhq2K,
+  .LandingPage_orbTwo__ePz_K {
+    opacity: 0.15;
+    filter: blur(50px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .LandingPage_charVisible__FPsJ8,
+  .LandingPage_orbOne__qhq2K,
+  .LandingPage_orbTwo__ePz_K {
+    animation: none !important;
+  }
 }
 

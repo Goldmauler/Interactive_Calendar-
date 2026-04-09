@@ -1,0 +1,733 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/CalendarApp/CalendarApp.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+/* CalendarApp.module.css */
+.CalendarApp_container__69YOf {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.CalendarApp_calendarCard__3DsO_ {
+  width: 100%;
+  max-width: 1200px;
+  background-color: var(--bg-panel);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+@media (min-width: 768px) {
+  .CalendarApp_calendarCard__3DsO_ {
+    flex-direction: column;
+    height: 800px;
+  }
+}
+
+.CalendarApp_topImageBanner__BjkE2 {
+  height: 35%;
+  display: flex;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.CalendarApp_heroImageHalf__D0RF7 {
+  flex: 1 1;
+  position: relative;
+  height: 100%;
+}
+
+.CalendarApp_bottomContent__y1te0 {
+  height: 65%;
+  display: flex;
+  flex-direction: row;
+}
+
+.CalendarApp_leftColumn__Zj_2_ {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-right: 1px solid var(--border-subtle);
+  background-color: var(--bg-panel);
+  z-index: 10;
+}
+
+@media (max-width: 767px) {
+  .CalendarApp_leftColumn__Zj_2_ {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+}
+
+.CalendarApp_rightColumn__a_XH_ {
+  flex: 1.5 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-panel);
+  position: relative;
+}
+
+
+.CalendarApp_wireBinding__HHDJ1 {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 24px;
+  display: flex;
+  justify-content: space-around;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.CalendarApp_coil__e_cd4 {
+  width: 10px;
+  height: 24px;
+  background-color: #6b7280;
+  border-radius: 8px;
+  box-shadow: inset 2px 2px 4px rgba(255,255,255,0.3), inset -2px -2px 4px rgba(0,0,0,0.5);
+  border: 1px solid #4b5563;
+}
+
+/* Header & Controls */
+.CalendarApp_headerNav__xmJ_b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.CalendarApp_navButtonGroup__hIM6F {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.CalendarApp_iconButton__tDh8k {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--border-subtle);
+  color: var(--text-primary);
+  transition: all 0.2s;
+}
+
+.CalendarApp_iconButton__tDh8k:hover:not(:disabled) {
+  background-color: var(--accent-color);
+  color: white;
+  transform: scale(1.05);
+}
+
+.CalendarApp_iconButton__tDh8k:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.CalendarApp_monthLabelWrap__ALmWa {
+  margin-bottom: 2rem;
+  position: relative;
+  height: auto;
+}
+
+.CalendarApp_monthLabel__218KM {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.CalendarApp_yearRowWrapper___zv4U {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.CalendarApp_yearLabel__SOdIs {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.CalendarApp_tabsRow___VG8Z {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  min-width: 0;
+  align-items: center;
+}
+
+.CalendarApp_tabButton__FR556 {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.24rem 0.52rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  background-color: var(--bg-panel);
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.CalendarApp_tabButton__FR556:hover {
+  color: var(--text-primary);
+  border-color: var(--border-darker);
+}
+
+.CalendarApp_tabButtonActive__OBdRr {
+  color: var(--text-primary);
+  border-color: var(--accent-color);
+  background-color: var(--accent-color-light);
+  box-shadow: 0 0 0 1px rgba(255, 107, 0, 0.12) inset;
+}
+
+.CalendarApp_clockIcon__Z7N3n {
+  opacity: 0.7;
+}
+
+/* Notes Section */
+.CalendarApp_notesSection__qFdqi {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+  min-height: 0;
+}
+
+.CalendarApp_notesHeader__tOa5q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.CalendarApp_notesTitle__cR06R {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.CalendarApp_notesList__LbOaU {
+  flex: 1 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.CalendarApp_noteItem__avdYE {
+  background-color: var(--border-subtle);
+  border-radius: 8px;
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: -webkit-grab;
+  cursor: grab;
+  /* CSS Resize natively */
+  resize: both;
+  overflow: hidden;
+  min-width: 150px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+}
+.CalendarApp_noteItem__avdYE:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.CalendarApp_noteInner__qfFDb {
+  padding: 1rem;
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+}
+
+.CalendarApp_noteItem__avdYE:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.CalendarApp_noteText__qlySD {
+  font-size: 0.875rem;
+  white-space: pre-wrap;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.CalendarApp_noteMeta__95iYB {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.CalendarApp_noteActions__cFw1b {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.CalendarApp_noteActionButton__99EWO {
+  color: var(--text-muted);
+}
+.CalendarApp_noteActionButton__99EWO:hover {
+  color: var(--accent-color);
+}
+
+.CalendarApp_pickerDropdown__42cwj {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-darker);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  width: 280px;
+}
+
+.CalendarApp_pickerGrid__wgmG9 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.CalendarApp_pickerBtn__rfMnG {
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  background-color: var(--border-subtle);
+  color: var(--text-primary);
+  transition: background-color 0.2s;
+}
+
+.CalendarApp_pickerBtn__rfMnG:hover {
+  background-color: var(--cell-hover);
+}
+
+.CalendarApp_pickerBtnActive__R2xjR {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.CalendarApp_pickerYearRow__lwq0x {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.CalendarApp_pickerYearRow__lwq0x button {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--border-subtle);
+  border-radius: 4px;
+}
+
+
+.CalendarApp_noteAddArea__BLEzE {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.CalendarApp_noteTextareaLined__WB2pF {
+  width: 100%;
+  flex: 1 1;
+  min-height: 190px;
+  resize: none;
+  border: none;
+  background-color: transparent;
+  background-image: repeating-linear-gradient(transparent, transparent 31px, var(--border-darker) 31px, var(--border-darker) 32px);
+  line-height: 32px;
+  padding: 0 0.25rem;
+  color: var(--text-primary);
+  font-family: inherit;
+}
+
+.CalendarApp_noteTextareaLined__WB2pF:focus {
+  outline: none;
+}
+
+.CalendarApp_saveNoteBtn__pZk6y {
+  align-self: center;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.6rem 2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+  margin-top: 1rem;
+}
+
+.CalendarApp_saveNoteBtn__pZk6y:hover:not(:disabled) {
+  background-color: var(--accent-color-hover);
+}
+
+.CalendarApp_saveNoteBtn__pZk6y:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.CalendarApp_focusOverlay__zPA_V {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  z-index: 9999;
+  padding: 2rem;
+}
+
+.CalendarApp_focusCard__cLZrz {
+  background-color: var(--bg-panel);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Right Col: Hero & Grid */
+.CalendarApp_heroSection__0_c5t {
+  height: 40%;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.CalendarApp_heroImage__GLzr7 {
+  object-fit: cover;
+  transition: transform 10s ease-out; /* Ken Burns base */
+}
+
+/* Page flip overlay styling */
+.CalendarApp_flipContainerWrapper__5_ae5 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  perspective: 2000px;
+}
+
+.CalendarApp_flipInner__sbrkY {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-calendar);
+}
+
+.CalendarApp_gridSection__kwx7A {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.CalendarApp_weekdaysHeader__6wWgy {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 1rem;
+}
+
+.CalendarApp_weekday__F6VS6 {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.CalendarApp_daysGrid__Cuw39 {
+  flex: 1 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 0.25rem;
+  gap: 0.25rem;
+}
+
+.CalendarApp_dayCellWrapper__MDYRp {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.CalendarApp_dayBg__B7EUC {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2.5rem;
+  transform: translateY(-50%);
+  background-color: var(--accent-color-light);
+  z-index: 1;
+}
+
+.CalendarApp_dayContent__U_gyD {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  color: var(--text-primary);
+}
+
+.CalendarApp_dayCellWrapper__MDYRp:hover .CalendarApp_dayContent__U_gyD {
+  background-color: var(--cell-hover);
+}
+
+.CalendarApp_dayOutOfMonth__D8y9C .CalendarApp_dayContent__U_gyD {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.CalendarApp_dayWeekend__M8I2h .CalendarApp_dayContent__U_gyD {
+  color: var(--accent-color);
+}
+
+.CalendarApp_dayToday__5q4TS .CalendarApp_dayContent__U_gyD {
+  background-color: var(--text-primary);
+  color: var(--bg-panel);
+}
+
+.CalendarApp_daySelected__mgt3B .CalendarApp_dayContent__U_gyD {
+  background-color: var(--selection-color);
+  color: var(--selection-text);
+  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+}
+
+.CalendarApp_holidayDot__KHiGN {
+  width: 4px;
+  height: 4px;
+  background-color: var(--holiday-dot);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0.35rem;
+}
+
+.CalendarApp_noteIndicator__kwz0E {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #f59e0b; /* Amber */
+  border: 1px solid var(--bg-panel);
+}
+
+.CalendarApp_badge__GpSB3 {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background-color: var(--accent-color-light);
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.CalendarApp_themeToggle__L_F_0 {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--bg-panel);
+  color: var(--text-primary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: transform 0.2s;
+}
+
+.CalendarApp_themeToggle__L_F_0:hover {
+  transform: scale(1.1);
+}
+
+/* Utility layout fixes for replacing removed tailwind */
+.CalendarApp_flexColGap2__QzY_m {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.CalendarApp_flexJustifyEndGap2__xEms_ {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.CalendarApp_heroGradient__tobyH {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--bg-calendar), transparent);
+  opacity: 0.8;
+}
+
+.CalendarApp_absoluteTopRight__FUJ01 {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.CalendarApp_absoluteMonthWrapper__4fCLx {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .CalendarApp_container__69YOf {
+    padding: 1rem 0.75rem;
+    align-items: flex-start;
+  }
+
+  .CalendarApp_calendarCard__3DsO_ {
+    max-width: 100%;
+  }
+
+  .CalendarApp_leftColumn__Zj_2_ {
+    padding: 1.2rem;
+  }
+
+  .CalendarApp_gridSection__kwx7A {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .CalendarApp_container__69YOf {
+    padding: 0.65rem 0.45rem;
+  }
+
+  .CalendarApp_topImageBanner__BjkE2 {
+    height: 140px;
+  }
+
+  .CalendarApp_bottomContent__y1te0 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .CalendarApp_leftColumn__Zj_2_,
+  .CalendarApp_rightColumn__a_XH_ {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .CalendarApp_leftColumn__Zj_2_ {
+    padding: 0.95rem;
+  }
+
+  .CalendarApp_rightColumn__a_XH_ {
+    min-height: 420px;
+  }
+
+  .CalendarApp_wireBinding__HHDJ1 {
+    display: none;
+  }
+
+  .CalendarApp_monthLabel__218KM {
+    font-size: 1.85rem;
+  }
+
+  .CalendarApp_yearRowWrapper___zv4U {
+    gap: 0.6rem;
+  }
+
+  .CalendarApp_tabsRow___VG8Z {
+    gap: 0.55rem;
+  }
+
+  .CalendarApp_tabButton__FR556 {
+    font-size: 0.75rem;
+    padding: 0.22rem 0.44rem;
+  }
+
+  .CalendarApp_noteTextareaLined__WB2pF {
+    min-height: 140px;
+  }
+
+  .CalendarApp_gridSection__kwx7A {
+    padding: 0.7rem;
+  }
+
+  .CalendarApp_weekdaysHeader__6wWgy {
+    margin-bottom: 0.5rem;
+  }
+
+  .CalendarApp_weekday__F6VS6 {
+    font-size: 0.62rem;
+    letter-spacing: 0.02em;
+  }
+
+  .CalendarApp_daysGrid__Cuw39 {
+    gap: 0.14rem;
+  }
+
+  .CalendarApp_dayBg__B7EUC {
+    height: 2.1rem;
+  }
+
+  .CalendarApp_dayContent__U_gyD {
+    width: min(2.05rem, calc((100vw - 1.9rem) / 7));
+    height: min(2.05rem, calc((100vw - 1.9rem) / 7));
+    font-size: 0.8rem;
+  }
+
+  .CalendarApp_themeToggle__L_F_0 {
+    width: 42px;
+    height: 42px;
+    bottom: 0.7rem;
+    right: 0.7rem;
+  }
+}
+
